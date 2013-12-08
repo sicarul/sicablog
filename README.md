@@ -1,4 +1,0 @@
-sicablog
-========
-
-Sicarul's Blog
