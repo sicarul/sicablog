@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="span10 offset1">
+    <h1>
+      <%= @post.title %>
+    </h1>
+    <p><small><%= @post.time %></small></p>
+  </div>
+</div>
+<div class="row">
+  <div class="span10 offset1">
+  <%= raw @markdown.render(@post.body) %>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @post.time %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <div class="row">
+    <div class="text-center span10 offset1">
+      <% if user_signed_in? %>
+      <%= link_to 'Edit', edit_post_path(@post), {:class => "btn"} %>
+      <% end %>
+      <%= link_to 'Back', :back, {:class => "btn"} %>
+    </div>
+  </div>

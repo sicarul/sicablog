@@ -1,7 +1,10 @@
 Sicablog::Application.routes.draw do
+  devise_for :users
   resources :posts
 
   root :to => redirect('/posts')
+  get '/archive' => 'posts#archive', :as => 'archive_posts'
+  get '/about' => 'pages#about', :as => 'about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
