@@ -10,7 +10,7 @@
             <h2><%= post.title %></h2>
             <p><small><%= post.time %></small></p>
             <p>
-              <% if post.body.size > @max_preview %><%= raw @markdown.render(post.body[0..@max_preview]) %>(Continua...)
+              <% if post.body.size > @max_preview %><%= raw @markdown.render(post.body[0..@max_preview]) %>(Continues...)
               <% else %> <%= raw @markdown.render(post.body) %>
               <% end %>
             </p>
