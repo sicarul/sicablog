@@ -4,6 +4,7 @@ Sicablog::Application.routes.draw do
 
   root :to => redirect('/posts')
   get '/archive' => 'posts#archive', :as => 'archive_posts'
+  get '/feed' => 'posts#feed', :as => 'feed', :defaults => { :format => 'atom' }
   get '/about' => 'pages#about', :as => 'about'
 
   # The priority is based upon order of creation: first created -> highest priority.
