@@ -16,8 +16,8 @@
   <div class="row">
     <div class="text-center col-md-10 offset1">
       <% if user_signed_in? %>
-      <%= link_to 'Edit', edit_post_path(@post), {:class => "btn"} %>
+      <%= link_to 'Edit', edit_post_path(@post), {:class => "btn btn-primary"} %>
       <% end %>
-      <%= link_to 'Back', :back, {:class => "btn"} %>
+      <%= link_to 'Back', :back, {:class => "btn btn-primary"} %>
     </div>
   </div>
