@@ -15,11 +15,11 @@
               <% end %>
             </p>
 
-            <p><%= link_to 'View complete post', post, {:class => 'btn'} %></p>
+            <p><%= link_to 'View complete post', post, {:class => 'btn btn-info'} %></p>
 
           <% if user_signed_in? %>
-            <p><%= link_to 'Edit', edit_post_path(post), {:class => 'btn'} %>
-            <%= link_to 'Destroy', post, {:class => 'btn', :method => :delete, data: { confirm: 'Are you sure?' } } %></p>
+            <p><%= link_to 'Edit', edit_post_path(post), {:class => 'btn btn-info'} %>
+            <%= link_to 'Destroy', post, {:class => 'btn btn-info', :method => :delete, data: { confirm: 'Are you sure?' } } %></p>
           <% end %>
         </div>
         </div>
