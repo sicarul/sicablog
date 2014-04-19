@@ -18,4 +18,5 @@ rerun.txt
 pickle-email-*.html
 .project
 config/initializers/secret_token.rb
+unicorn.rb
 public/
