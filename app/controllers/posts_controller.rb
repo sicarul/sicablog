@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @updated = @posts.first.updated_at unless @posts.empty?
 
     respond_to do |format|
-      format.atom { render :layout => false }
+      format.atom { render :layout => false, content_type: "application/atom+xml" }
 
       # we want the RSS feed to redirect permanently to the ATOM feed
       format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
