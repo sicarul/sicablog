@@ -11,11 +11,13 @@
   <%= raw @markdown.render(@post.body) %>
   </div>
 </div>
+  <hr>
+  <em>You can comment this post below</em>
 
   <div id="disqus_thread"></div>
   <script type="text/javascript">
       var disqus_shortname = 'sica-blog';
-      
+
       (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
