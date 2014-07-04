@@ -100,7 +100,7 @@ class PostsController < ApplicationController
 
     def prepare_views
       @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
-      @max_preview = 800
+      @max_preview = 300
       @max_posts = 5
     end
 end
